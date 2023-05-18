@@ -54,15 +54,3 @@ provider "helm" {
     cluster_ca_certificate = base64decode(module.retail_app_eks.cluster_certificate_authority_data)
   }
 }
-
-
-provider "aws" {
-  profile = "${terraform.workspace}-test-account"
-  region = "us-west-2"
-}
-
-provider "aws" {
-  alias = "secrets"
-  profile = "test-test-account"
-  region = "us-west-2"
-}
