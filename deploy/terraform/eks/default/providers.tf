@@ -15,7 +15,7 @@ terraform {
   backend "s3" {
     profile              = "test-test-account"
     bucket               = "xspm-poc-terraform-backend-state"
-    key                  = "aws_retail-store-sample-app.tfstate"
+    key                  = "aws_retail-store-sample-app_eks.tfstate"
     region               = "us-west-2"
 
     dynamodb_table = "xspm-poc-terraform-states-lock-table"
